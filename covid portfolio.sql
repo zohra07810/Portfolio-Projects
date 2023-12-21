@@ -1,3 +1,12 @@
+/*
+Covid 19 Data Exploration 
+
+Skills used: Joins, CTE's, Temp Tables, Windows Functions, Aggregate Functions, Creating Views, Converting Data Types
+
+*/
+
+-- Select Data that we are going to be starting with
+
 SELECT*
 FROM PortfolioProject..CovidDeaths$
 order by 3,4
@@ -10,6 +19,8 @@ SELECT location,date,total_cases,new_cases,total_deaths,population
 FROM PortfolioProject..CovidDeaths$
 order by 1,2
 
+Total Cases vs Total Deaths
+  
 SELECT location,date,total_cases,total_deaths,(total_deaths/total_cases)*100 as DeathPercentage
 FROM PortfolioProject..CovidDeaths$
 order by 1,2
